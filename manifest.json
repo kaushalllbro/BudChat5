@@ -1,9 +1,8 @@
 {
-  "name": "BudChat — Made With Love",
+  "name": "BudChat",
   "short_name": "BudChat",
-  "description": "A private love-themed chat for two. Made with love by Kaushal Sharma.",
-  "start_url": "./BudChat.html",
-  "scope": "./",
+  "description": "by Kaushal Sharma.",
+  "start_url": "index.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#1a0a14",
