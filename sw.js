@@ -1,6 +1,6 @@
 // BudChat service worker — offline shell + cache
 const CACHE = 'budchat-v1';
-const SHELL = ['./', './BudChat.html', './manifest.json'];
+const SHELL = ['/', 'index.html', 'manifest.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).catch(() => {}));
@@ -38,7 +38,7 @@ self.addEventListener('fetch', (e) => {
           caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {});
         }
         return res;
-      }).catch(() => cached || caches.match('./BudChat.html'));
+      }).catch(() => cached || caches.match('index.html'));
       return cached || fetchPromise;
     })
   );
